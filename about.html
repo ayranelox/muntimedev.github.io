@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - MoonDev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"location.reload()" class="logo">
+            <img src="logo.png" alt="MoonDev">
+        </a>
+        <nav>
+            <a href="about.html">О нас</a>
+            <a href="shop.html">Магазин</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="portfolio-section">
+            <div class="portfolio-content">
+        <h1>Наше портфолио!</h1>
+                <p>За месяц нашей работы мы смогли<br>
+                сделать много самописов, таких как:<br>
+                RTP, Привязка, и многое другое.<br>
+                Мы также можем помочь вам с вашим проектом!<br>
+                Чтобы связаться с нами, нажмите на кнопку "Написать нам"<br>
+                <P></P>
+                <button class="btn-more" onclick="openModal()">Написать нам</button>
+            </div>
+            <div class="code-preview">
+                <pre class="code-block">
+<span class="comment"># Блок для включения плагина</span>
+plugin<span class="separator">:</span> <span class="keyword">true</span>
+
+<span class="comment"># Какие голограммы будут использоваться?</span>
+<span class="comment"># DecentHolograms лучшее решение</span>
+holograms<span class="separator">:</span> <span class="keyword">DecentHolograms</span>
+
+<span class="comment"># Настройки голограмм под ваш вкус!</span>
+holo<span class="separator">:</span>
+  first1<span class="separator">:</span>
+    line1<span class="separator">:</span> "Привет, я первая голограмма!"
+    line2<span class="separator">:</span> "Я второй ряд текста!"
+    line3<span class="separator">:</span> "Я третий ряд текста!"
+    line4<span class="separator">:</span> "Я четвертый ряд текста!"
+<span class="comment"># и так далее можете добавлять сколько угодно</span></pre>
+            </div>
+        </div>
+        <div class="servers-list">
+            <div class="server-item">
+                Отсуствуют! Но ждем вашего сообщения!
+            </div>
+        </div>
+    </main>
+
+    <!-- Модальное окно -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <h2>Свяжитесь с нами!</h2>
+            <p>В данный момент, вы сможете связаться с нами через:</p>
+            <div class="modal-buttons">
+                <a href="https://t.me/ayraneloz" class="modal-btn telegram">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
+                <a href="vk.com/moontimedev" class="modal-btn vk">
+                    <i class="fab fa-vk"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            const modal = document.getElementById('contactModal');
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('contactModal');
+            modal.style.opacity = '0';
+            setTimeout(() => {
+                modal.style.display = 'none';
+                modal.style.opacity = '1';
+            }, 300);
+        }
+
+        // Закрытие модального окна при клике вне его
+        window.onclick = function(event) {
+            const modal = document.getElementById('contactModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
